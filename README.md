@@ -65,5 +65,5 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ALARD Adrien et Paul CHESNEAU
 
-Adrien :    - inscription
+Adrien :    - vue des utilisateurs dans la base de donnée et boutton de suppression des données et ajout de données ds la base de donnée
 Paul:       - base de donnée
