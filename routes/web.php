@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\User as User;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +14,27 @@ use App\Models\User as User;
 |
 */
 
+Routes::get('/users', [UserController::class, 'index']);
+
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('admin' , 'App\Http\Controllers\users@index');
+
+Route::get('/inscription', function () {
+    return view('inscription');
+});
+
+Route::get('/connection', function () {
+    return view('connection');
+});
+
+Route::get('/profil', function () {
+    return view('profil');
+});
+
+Route::get('/allprofil', function () {
+    return view('allprofil');
+});
