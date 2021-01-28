@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Routes::get('/users', [UserController::class, 'index']);
+
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/inscription', function () {
+    return view('inscription');
+});
+
+Route::get('/connection', function () {
+    return view('connection');
+});
+
+Route::get('/profil', function () {
+    return view('profil');
+});
+
+Route::get('/allprofil', function () {
+    return view('allprofil');
 });
